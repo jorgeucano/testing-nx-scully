@@ -18,8 +18,8 @@
     "typeRoots": ["../../node_modules/@types"],
     "allowJs": true,
     "paths": {
-      "@scullyio/scully": ["../../dist/scully"],
-      "*": ["node_modules/*"]
+      "@scullyio/scully": ["../../dist/libs/scully"],
+      "*": ["../../node_modules/*"]
     },
     "plugins": [
       {
@@ -27,6 +27,5 @@
       }
     ]
   },
-  "files": ["./src/index.ts"],
-  "exclude": ["bin/**/*", "bin/**/*.d.ts", "bin/index.js", "../../dist/**/*"]
+  "files": ["./index.ts"]
 }

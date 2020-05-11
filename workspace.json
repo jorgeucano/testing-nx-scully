@@ -325,7 +325,7 @@
             "outputPath": "dist/libs/scully-plugin-flash-prevention",
             "tsConfig": "libs/scully-plugin-flash-prevention/tsconfig.lib.json",
             "packageJson": "libs/scully-plugin-flash-prevention/package.json",
-            "main": "libs/scully-plugin-flash-prevention/src/index.ts",
+            "main": "libs/scully-plugin-flash-prevention/index.ts",
             "assets": ["libs/scully-plugin-flash-prevention/*.md"]
           }
         }

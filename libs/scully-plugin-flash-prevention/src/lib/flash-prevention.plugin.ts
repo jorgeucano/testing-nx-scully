@@ -1,5 +1,6 @@
-import {registerPlugin} from '@scullyio/scully';
-import {appendToHead} from './utils';
+/* eslint-disable @typescript-eslint/no-use-before-define */
+import { registerPlugin } from '@scullyio/scully';
+import { appendToHead } from './utils';
 
 let AppRootSelector = 'app-root';
 let LoadedClass = 'loaded';
@@ -8,7 +9,7 @@ const AppRootAttrsBlacklist = ['_nghost', 'ng-version'];
 const MockRootAttrsBlacklist = [];
 
 registerPlugin('render', FlashPrevention, flashPreventionPlugin);
-registerPlugin('router', FlashPrevention, async ur => [{route: ur}]);
+registerPlugin('router', FlashPrevention, async ur => [{ route: ur }]);
 
 interface FlashPreventionPluginOptions {
   appRootSelector?: string;
@@ -21,7 +22,7 @@ export function getFlashPreventionPlugin({
   appRootSelector,
   appLoadedClass,
   appRootAttributesBlacklist,
-  mockAttributesBlacklist,
+  mockAttributesBlacklist
 }: FlashPreventionPluginOptions = {}) {
   if (appRootSelector) {
     AppRootSelector = appRootSelector;
@@ -36,7 +37,7 @@ export function getFlashPreventionPlugin({
   return FlashPrevention;
 }
 
-async function flashPreventionPlugin(html, handledRoute) {
+async function flashPreventionPlugin(html) {
   let newHtml = await createSecondAppRoot(html);
   newHtml = await addBitsToHead(newHtml);
   return newHtml;
@@ -46,20 +47,29 @@ async function createSecondAppRoot(html) {
   const appRootSelector = AppRootSelector;
   const appRootStartRegExp = new RegExp(`\<${appRootSelector}[^>]*\>`, 'g');
   const appRootEndRegExp = new RegExp(`\<\/${appRootSelector}\>`, 'g');
-  let [openTagMatch] = html.match(appRootStartRegExp);
+  const [openTagMatch] = html.match(appRootStartRegExp);
   const [closeTagMatch] = html.match(appRootEndRegExp);
 
-  let cleanedAppRootOpenTag: string = fetchCleanedOpenTag(openTagMatch, AppRootAttrsBlacklist);
-  let cleanedMockOpenTag: string = fetchCleanedOpenTag(openTagMatch, MockRootAttrsBlacklist).replace(
-    appRootSelector,
-    `${appRootSelector}-scully`
+  const cleanedAppRootOpenTag: string = fetchCleanedOpenTag(
+    openTagMatch,
+    AppRootAttrsBlacklist
   );
+  const cleanedMockOpenTag: string = fetchCleanedOpenTag(
+    openTagMatch,
+    MockRootAttrsBlacklist
+  ).replace(appRootSelector, `${appRootSelector}-scully`);
 
-  let newHtml = html
+  const newHtml = html
     // replace the closing tag with replacement scully closing tag
-    .replace(closeTagMatch, `${closeTagMatch.replace(appRootSelector, `${appRootSelector}-scully`)}`)
+    .replace(
+      closeTagMatch,
+      `${closeTagMatch.replace(appRootSelector, `${appRootSelector}-scully`)}`
+    )
     // replace opening tag with cleaned app root tag AND replacement scully app root tag
-    .replace(openTagMatch, `${cleanedAppRootOpenTag}${closeTagMatch}${cleanedMockOpenTag}`);
+    .replace(
+      openTagMatch,
+      `${cleanedAppRootOpenTag}${closeTagMatch}${cleanedMockOpenTag}`
+    );
   ``;
   return newHtml;
 }
