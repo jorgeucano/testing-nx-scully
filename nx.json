@@ -45,7 +45,8 @@
       "implicitDependencies": ["scully-docs"]
     },
     "scully-plugin-flash-prevention": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["scully"]
     }
   }
 }

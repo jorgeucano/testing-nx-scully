@@ -1,1 +1,1 @@
-export {getFlashPreventionPlugin} from './lib/flash-prevention.plugin';
+export * as getFlashPreventionPlugin from './lib/flash-prevention.plugin';
