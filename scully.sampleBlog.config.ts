@@ -3,8 +3,8 @@ import './demos/plugins/extra-plugin.js';
 import './demos/plugins/tocPlugin';
 import './demos/plugins/voidPlugin';
 import './demos/plugins/errorPlugin';
-import {ScullyConfig, setPluginConfig} from '@scullyio/scully';
 import {getFlashPreventionPlugin} from '@scullyio/scully-plugin-flash-prevention';
+import {ScullyConfig, setPluginConfig} from '@scullyio/scully';
 
 const FlashPrevention = getFlashPreventionPlugin();
 setPluginConfig('md', {enableSyntaxHighlighting: true});

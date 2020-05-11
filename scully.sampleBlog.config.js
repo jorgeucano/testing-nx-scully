@@ -5,8 +5,8 @@ require("./demos/plugins/extra-plugin.js");
 require("./demos/plugins/tocPlugin");
 require("./demos/plugins/voidPlugin");
 require("./demos/plugins/errorPlugin");
-var scully_1 = require("@scullyio/scully");
 var scully_plugin_flash_prevention_1 = require("@scullyio/scully-plugin-flash-prevention");
+var scully_1 = require("@scullyio/scully");
 var FlashPrevention = scully_plugin_flash_prevention_1.getFlashPreventionPlugin();
 scully_1.setPluginConfig('md', { enableSyntaxHighlighting: true });
 exports.config = {
