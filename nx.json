@@ -32,17 +32,9 @@
       "tags": [],
       "implicitDependencies": ["ng-lib", "scully"]
     },
-    "sample-blog-e2e": {
-      "tags": [],
-      "implicitDependencies": ["sample-blog"]
-    },
     "scully-docs": {
       "tags": [],
       "implicitDependencies": ["ng-lib", "scully"]
-    },
-    "scully-docs-e2e": {
-      "tags": [],
-      "implicitDependencies": ["scully-docs"]
     },
     "scully-plugin-flash-prevention": {
       "tags": [],

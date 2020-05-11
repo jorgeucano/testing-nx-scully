@@ -198,33 +198,6 @@
         }
       }
     },
-    "sample-blog-e2e": {
-      "root": "apps/sample-blog-e2e",
-      "sourceRoot": "apps/sample-blog-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/sample-blog-e2e/cypress.json",
-            "tsConfig": "apps/sample-blog-e2e/tsconfig.e2e.json",
-            "devServerTarget": "sample-blog:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "sample-blog:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/sample-blog-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/sample-blog-e2e/**"]
-          }
-        }
-      }
-    },
     "scully-docs": {
       "projectType": "application",
       "schematics": {},
@@ -313,33 +286,6 @@
             "tsConfig": "apps/scully-docs/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "apps/scully-docs/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "scully-docs-e2e": {
-      "root": "apps/scully-docs-e2e",
-      "sourceRoot": "apps/scully-docs-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/scully-docs-e2e/cypress.json",
-            "tsConfig": "apps/scully-docs-e2e/tsconfig.e2e.json",
-            "devServerTarget": "scully-docs:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "scully-docs:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/scully-docs-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/scully-docs-e2e/**"]
           }
         }
       }
