@@ -17,16 +17,11 @@
     "types": ["node"],
     "typeRoots": ["../../node_modules/@types"],
     "allowJs": true,
-    "paths": {
-      "@scullyio/scully": ["../../dist/scullyio/scully"],
-      "*": ["node_modules/*"]
-    },
     "plugins": [
       {
         "disabledRules": ["check-return-value", "must-use-promises"]
       }
     ]
   },
-  "files": ["./index.ts"],
-  "exclude": ["bin/**/*", "bin/**/*.d.ts", "bin/index.js", "../../dist/**/*"]
+  "files": ["./index.ts"]
 }
