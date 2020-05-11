@@ -67,7 +67,6 @@
     "@nrwl/cypress": "9.2.4",
     "@nrwl/eslint-plugin-nx": "9.2.4",
     "@nrwl/jest": "9.2.4",
-    "@nrwl/node": "^9.2.4",
     "@nrwl/workspace": "9.2.4",
     "@types/chalk": "^2.2.0",
     "@types/express": "^4.17.3",
