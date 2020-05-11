@@ -116,7 +116,6 @@
     "puppeteer": "^2.1.1",
     "start-server-and-test": "^1.10.11",
     "ts-jest": "25.2.1",
-    "ts-node": "~7.0.0",
     "tsickle": "^0.38.1",
     "tslib": "^1.10.0",
     "tslint": "~6.0.0",
