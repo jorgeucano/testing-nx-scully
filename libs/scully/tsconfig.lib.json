@@ -17,7 +17,7 @@
     "types": ["node"],
     "typeRoots": [],
     "paths": {
-      "@scullyio/scully": ["../../dist/libs/scully"],
+      "@scullyio/scully": ["dist/libs/scully"],
       "*": ["node_modules/*"]
     }
   },
