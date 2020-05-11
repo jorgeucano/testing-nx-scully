@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@scullyio/scully": ["libs/scully/src/index.ts"],
+      "@scullyio/ng-lib": ["libs/ng-lib/src/index.ts"],
+      "@scullyio/scully-plugin-flash-prevention": [
+        "libs/scully-plugin-flash-prevention/src/index.ts"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "disableTypeScriptVersionCheck": true
+  },
+  "exclude": ["node_modules", "tmp"]
+}

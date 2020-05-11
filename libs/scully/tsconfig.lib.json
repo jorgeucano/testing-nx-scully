@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./scully",
+    "declaration": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "emitDeclarationOnly": false,
+    "lib": ["es2018", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "../../dist/scullyio/scully",
+    "sourceMap": true,
+    "target": "es2018",
+    "types": ["node"],
+    "typeRoots": [],
+    "paths": {
+      "*": ["node_modules/*"]
+    }
+  },
+  "files": ["./src/index.ts", "src/lib/scully.ts"],
+  "exclude": ["src/bin/**/*", "src/bin/**/*.d.ts", "src/bin/index.js", "../../dist/**/*"]
+}
