@@ -8,7 +8,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "emitDeclarationOnly": false,
-    "lib": ["es2018", "dom"],
+    "lib": ["ES2019", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "../../dist/scullyio/scully",
