@@ -26,8 +26,8 @@
     "help": "nx help",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "cypress:e2e": "cypress run --spec 'tests/cypress/integration/**/*' --browser chrome",
-    "cypress:e2e:server": "start-server-and-test scully:run:cypress http://localhost:1668 e2e",
-    "scully:run:cypress": "node ./dist/libs/scully serve --project=sampleBlog --tds"
+    "cypress:e2e:server": "start-server-and-test scully:run:cypress http://localhost:1668 cypress:e2e",
+    "scully:run:cypress": "node ./dist/libs/scully/scully serve --project=sampleBlog --tds"
   },
   "private": true,
   "dependencies": {
