@@ -92,6 +92,6 @@ exports.config = {
         },
     },
     guessParserOptions: {
-        excludedFiles: ['ng-projects/sampleBlog/src/app/exclude/exclude-routing.module.ts'],
+        excludedFiles: ['apps/sample-blog/src/app/exclude/exclude-routing.module.ts'],
     },
 };
