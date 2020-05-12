@@ -11,6 +11,7 @@ import {routeSplit} from './lib/utils/routeSplit';
 import {getHandledRoutes} from './lib/utils/services/routeStorage';
 import {startScully} from './lib/utils/startup';
 
+
 export * from './lib/utils/log';
 export {
   configValidator,

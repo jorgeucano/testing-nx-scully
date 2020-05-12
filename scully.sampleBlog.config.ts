@@ -11,9 +11,10 @@ setPluginConfig('md', {enableSyntaxHighlighting: true});
 
 export const config: ScullyConfig = {
   /** outDir is where the static distribution files end up */
-  bareProject:true,
+  // bareProject:true,
+  projectName: 'sample-blog',
   outDir: './dist/static',
-  distFolder: './dist/apps/sample-blog',
+  // distFolder: './dist/apps/sample-blog',
   // hostName: '0.0.0.0',
   // hostUrl: 'http://localHost:5000',
   extraRoutes: Promise.resolve(['/exclude/present']),

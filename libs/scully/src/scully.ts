@@ -3,21 +3,22 @@
 /**
  * The above line is needed to be able to run in npx and CI.
  */
+console.log('starting');
 import {readFileSync} from 'fs-extra';
 import open from 'open';
 import {join} from 'path';
-import './pluginManagement/systemPlugins';
-import {startBackgroundServer} from './startBackgroundServer';
-import * as cliOption from './utils/cli-options';
-import {ssl} from './utils/cli-options';
-import {loadConfig} from './utils/config';
-import {moveDistAngular} from './utils/fsAngular';
-import {httpGetJson} from './utils/httpGetJson';
-import {isPortTaken} from './utils/serverstuff/isPortTaken';
-import {logError, logWarn, yellow} from './utils/log';
-import {startScully} from './utils/startup';
-import {waitForServerToBeAvailable} from './utils';
-import {bootServe, isBuildThere, watchMode} from './watchMode';
+import './lib/pluginManagement/systemPlugins';
+import {startBackgroundServer} from './lib/startBackgroundServer';
+import * as cliOption from './lib/utils/cli-options';
+import {ssl} from './lib/utils/cli-options';
+import {loadConfig} from './lib/utils/config';
+import {moveDistAngular} from './lib/utils/fsAngular';
+import {httpGetJson} from './lib/utils/httpGetJson';
+import {isPortTaken} from './lib/utils/serverstuff/isPortTaken';
+import {logError, logWarn, yellow} from './lib/utils/log';
+import {startScully} from './lib/utils/startup';
+import {waitForServerToBeAvailable} from './lib/utils';
+import {bootServe, isBuildThere, watchMode} from './lib/watchMode';
 
 /** the default of 10 is too shallow for generating pages. */
 require('events').defaultMaxListeners = 100;
@@ -27,9 +28,14 @@ if (process.argv.includes('version')) {
   process.exit(0);
 }
 
+// console.log('starting')
+
+
 (async () => {
   /** make sure not to do something before the config is ready */
+  console.log('going to load')
   const scullyConfig = await loadConfig;
+  console.log('config loaed')
   if (cliOption.hostName) {
     scullyConfig.hostName = cliOption.hostName;
   }
@@ -44,6 +50,7 @@ if (process.argv.includes('version')) {
     process.exit(0);
     return;
   }
+  console.log('before build')
   await isBuildThere(scullyConfig);
 
   if (process.argv.includes('serve')) {

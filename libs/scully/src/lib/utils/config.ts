@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import {readFileSync} from 'fs';
 import {jsonc} from 'jsonc';
 import {join} from 'path';
@@ -28,8 +29,9 @@ const loadIt = async () => {
       process.exit(15);
     }
   } catch (e) {
-    // logError(`Could not find project "${yellow(compiledConfig.projectName)}" in 'angular.json'.`);
-    // process.exit(15);
+    console.log(e)
+    logError(`Could not find project "${yellow(compiledConfig.projectName)}" in 'angular.json'.`);
+    process.exit(15);
   }
 
   if (compiledConfig.hostUrl && compiledConfig.hostUrl.endsWith('/')) {

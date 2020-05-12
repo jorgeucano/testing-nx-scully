@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import {performance, PerformanceObserver, PerformanceObserverCallback} from 'perf_hooks';
 import {watch, ssl} from './cli-options';
 import {scullyConfig} from './config';
