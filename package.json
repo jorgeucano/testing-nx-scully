@@ -110,7 +110,7 @@
     "jest-preset-angular": "8.1.2",
     "jsonc": "^2.0.0",
     "marked": "^0.8.1",
-    "ng-packagr": "^9.0.0",
+    "ng-packagr": "^10.1.1",
     "nodemon": "^2.0.2",
     "osascript": "^1.2.0",
     "prettier": "1.19.1",
